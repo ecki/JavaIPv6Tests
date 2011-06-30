@@ -1,10 +1,8 @@
 /*
  * IPV6Test.java
  *
- * created at 2011-06-28by Eckenfel <YOURMAILADDRESS>
+ * created at 2011-06-28 by Bernd Eckenfels
  * 
- * $Id: $
- *
  * Copyright (c) 2011 SEEBURGER AG, Germany. All Rights Reserved.
  */
 package net.eckenfels.ipv6test;
