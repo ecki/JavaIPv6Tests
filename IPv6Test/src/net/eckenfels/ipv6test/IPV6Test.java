@@ -20,7 +20,7 @@ import java.net.UnknownHostException;
 /**
  * Test class to demonstrate multiple aspects of IPv6 sockets in Java.
  * 
- * @author Bernd Eckenfels
+ * @author Bernd Eckenfels 
  */
 public class IPV6Test
 {
