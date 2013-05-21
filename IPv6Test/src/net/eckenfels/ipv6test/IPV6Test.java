@@ -54,7 +54,7 @@ public class IPV6Test
             listenDefault(args[1]);
         else {
             System.out
-                    .println("IPV6Test gettaddrinfo <host>|listen [<host>] <port>|localaddr|connect <host> <port>");
+                    .println("IPV6Test getaddrinfo <host>|listen [<host>] <port>|localaddr|connect <host> <port>");
         }
     }
 
