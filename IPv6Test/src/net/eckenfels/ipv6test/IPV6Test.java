@@ -68,7 +68,8 @@ public class IPV6Test
      */
     static void listen(String host, String port)
     {
-        System.out.printf("Looking up with getAllByName(%s)...%n");
+        System.out.printf("Looking up with getAllByName(%s,%s)...%n", host, port);
+
         long start = System.nanoTime();
         InetAddress[] addresses = null;
         try {
@@ -131,9 +132,9 @@ public class IPV6Test
      */
     static void listenDefault(String port)
     {
-        int portnum = Integer.parseInt(port);
+        System.out.printf("Binding to default address (%s)...%n", port);
 
-        System.out.println("Binding to default address...");
+        int portnum = Integer.parseInt(port);
 
         long start = System.nanoTime();
         ServerSocket socket = null;
@@ -170,6 +171,7 @@ public class IPV6Test
         }
     }
 
+
     /**
      * TCP connect to a given endpoint.
      * 
@@ -180,7 +182,7 @@ public class IPV6Test
      */
     static void connectHost(String host, String port)
     {
-        System.out.println("Looking up with getAllByName(" + host + ")...");
+        System.out.printf("Looking up with getAllByName(%s, %s)...%n", host, port);
 
         InetAddress[] addresses = null;
         long start = System.nanoTime();
@@ -262,7 +264,8 @@ public class IPV6Test
      */
     static void printInfo(String host)
     {
-        System.out.println("Looking up with getAllByName(" + host + ")...");
+        System.out.printf("Looking up with getAllByName(%s)...%n", host);
+
         InetAddress[] addresses = null;
         long start = System.nanoTime();
         try {
@@ -288,9 +291,10 @@ public class IPV6Test
     static void printProperties()
     {
         // write out some information about the JVM and OS
-        System.out.printf("Java %s (%s) os=%s version=%s level=%s bit=%s%n",
+        System.out.printf("Java %s (%s %s) os=%s version=%s level=%s bit=%s%n",
                 System.getProperty("java.runtime.version", "N/A"),
-                System.getProperty("java.vendor", "N/A"),
+                System.getProperty("java.vm.name", "N/A"),
+                System.getProperty("java.vm.version", "N/A"),
                 System.getProperty("os.name", "N/A"),
                 System.getProperty("os.version", "N/A"),
                 System.getProperty("sun.os.patch.level", "N/A"),
